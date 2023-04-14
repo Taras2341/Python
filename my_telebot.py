@@ -1,12 +1,11 @@
 import telebot
 
-
-bot = telebot.Telebot('5907869617:AAFxh5mSIaoqmRVzmzDpj3Ah97E565WgkGk')
+bot = telebot.TeleBot('5907869617:AAFxh5mSIaoqmRVzmzDpj3Ah97E565WgkGk')
 
 # Определяем символы игроков и пустую ячейку
 PLAYER_X = 'X'
 PLAYER_O = 'O'
-EMPTY = ' '
+EMPTY = '..'
 
 # Определяем функцию для создания игрового поля
 def create_board():
@@ -109,4 +108,4 @@ def player_move(message):
         return
     # Ход компьютера
     computer_move()
-
+bot.infinity_polling()
